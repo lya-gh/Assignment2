@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "348030987524",
+    "project_id": "operationmath",
+    "storage_bucket": "operationmath.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348030987524:android:bf1e346ab595f5af4d7451",
+        "android_client_info": {
+          "package_name": "com.lya.operationmath"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDl7hAcUfAEo7KCzS-l664SbTmG_SGlhcs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
