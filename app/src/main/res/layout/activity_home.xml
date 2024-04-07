@@ -13,7 +13,7 @@
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:layout_marginStart="128dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="128dp"
         android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/disketmonoregular"
@@ -21,9 +21,26 @@
         android:textColor="#264941"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/beginButton" />
+
+    <Button
+        android:id="@+id/highScoreButton"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="128dp"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/disketmonoregular"
+        android:text="High Score"
+        android:textColor="#264941"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/extrasButton" />
 
     <Button
         android:id="@+id/beginButton"
@@ -64,7 +81,7 @@
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:layout_marginStart="128dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="128dp"
         android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/disketmonoregular"
@@ -72,16 +89,16 @@
         android:textColor="#264941"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/extrasButton" />
+        app:layout_constraintTop_toBottomOf="@+id/highScoreButton" />
 
     <Button
         android:id="@+id/profileHomeButton"
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:layout_marginStart="128dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="128dp"
         android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/disketmonoregular"
@@ -89,9 +106,9 @@
         android:textColor="#264941"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/extrasButton" />
+        app:layout_constraintTop_toBottomOf="@+id/highScoreButton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
