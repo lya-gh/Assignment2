@@ -71,8 +71,6 @@ class ProfileActivity : AppCompatActivity() {
                 .addOnFailureListener { e ->
                 }
         } else {
-            // Current user's email is null
-            // Handle the case where user email is null (should not happen in normal flow)
         }
     }
 
@@ -82,7 +80,6 @@ class ProfileActivity : AppCompatActivity() {
 
         val currentUser = auth.currentUser
 
-        // Check if user is authenticated
         currentUser?.let { user ->
             val uid = user.uid
             val userRef = firestore.collection("users").document(uid)
@@ -90,15 +87,12 @@ class ProfileActivity : AppCompatActivity() {
             // Update displayName field in Firestore document
             userRef.update("displayName", newDisplayName)
                 .addOnSuccessListener {
-                    // Display a toast message indicating successful update
                     Toast.makeText(this@ProfileActivity, "Display name updated successfully", Toast.LENGTH_SHORT).show()
                 }
                 .addOnFailureListener { e ->
-                    // Display a toast message indicating failure with error details
                     Toast.makeText(this@ProfileActivity, "Error updating display name: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
         } ?: run {
-            // User is not authenticated, display a toast message
             Toast.makeText(this@ProfileActivity, "User not authenticated", Toast.LENGTH_SHORT).show()
             println("User not authenticated")
         }

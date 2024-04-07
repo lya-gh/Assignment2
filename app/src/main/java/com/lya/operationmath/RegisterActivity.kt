@@ -81,7 +81,6 @@ class RegisterActivity : AppCompatActivity() {
             // Data successfully stored
             }
             .addOnFailureListener { e ->
-            // Handle failure
             }
     }
 
