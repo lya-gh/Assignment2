@@ -27,6 +27,8 @@ class ExtrasActivity : AppCompatActivity() {
         val browserButton = findViewById<ImageButton>(R.id.browserImageButton)
         val phoneButton = findViewById<ImageButton>(R.id.phoneImageButton)
         val openCalendarButton = findViewById<ImageView>(R.id.openCalendarButton)
+        val openFacebookButton = findViewById<ImageView>(R.id.openFacebookButton)
+
 
         //Open maps using OnClick Event
         /*mapsButton.setOnClickListener {
@@ -88,7 +90,15 @@ class ExtrasActivity : AppCompatActivity() {
                     )
                 )
             }
-        }
+            //Open facebook in browser using OnClick Event
+            openFacebookButton.setOnClickListener {
+                val url = "https://www.facebook.com"
 
+                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                startActivity(browserIntent)
+            }
+
+
+        }
     }
 }
