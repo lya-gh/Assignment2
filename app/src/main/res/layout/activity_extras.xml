@@ -9,26 +9,44 @@
 
     <ImageButton
         android:id="@+id/mapsImageButton"
+<<<<<<< HEAD
         android:layout_width="96dp"
         android:layout_height="107dp"
         android:layout_marginStart="25dp"
+=======
+        android:layout_width="156dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="184dp"
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
         android:layout_marginEnd="10dp"
         android:adjustViewBounds="true"
         android:backgroundTint="#395A53"
         android:contentDescription="Maps icon"
         android:scaleType="fitCenter"
+<<<<<<< HEAD
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/galleryImageButton"
         app:layout_constraintHorizontal_bias="0.184"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.219"
+=======
+        app:layout_constraintEnd_toStartOf="@+id/galleryImageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
         app:srcCompat="@drawable/maps" />
 
     <ImageButton
         android:id="@+id/messageImageButton"
+<<<<<<< HEAD
         android:layout_width="96dp"
         android:layout_height="107dp"
+=======
+        android:layout_width="156dp"
+        android:layout_height="134dp"
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
         android:layout_marginTop="44dp"
         android:layout_marginEnd="10dp"
         android:adjustViewBounds="true"
@@ -37,16 +55,28 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.501"
+=======
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.575"
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
         app:srcCompat="@drawable/message" />
 
     <ImageButton
         android:id="@+id/browserImageButton"
+<<<<<<< HEAD
         android:layout_width="96dp"
         android:layout_height="107dp"
+=======
+        android:layout_width="156dp"
+        android:layout_height="134dp"
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
         android:layout_marginStart="10dp"
         android:layout_marginTop="48dp"
         android:adjustViewBounds="true"
@@ -55,33 +85,61 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.496"
+=======
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571"
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
         app:srcCompat="@drawable/browser" />
 
     <ImageButton
         android:id="@+id/galleryImageButton"
+<<<<<<< HEAD
         android:layout_width="96dp"
         android:layout_height="107dp"
         android:layout_marginStart="10dp"
+=======
+        android:layout_width="156dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="184dp"
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
         android:adjustViewBounds="true"
         android:backgroundTint="#395A53"
         android:contentDescription="Maps icon"
         android:scaleType="fitCenter"
+<<<<<<< HEAD
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.218"
+=======
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
         app:srcCompat="@drawable/gallery" />
 
     <ImageButton
         android:id="@+id/phoneImageButton"
+<<<<<<< HEAD
         android:layout_width="96dp"
         android:layout_height="107dp"
+=======
+        android:layout_width="156dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="223dp"
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
         android:layout_marginBottom="6dp"
         android:adjustViewBounds="true"
         android:backgroundTint="#395A53"
@@ -89,17 +147,28 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         app:layout_constraintHorizontal_bias="0.917"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.221"
+=======
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.901"
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
         app:srcCompat="@drawable/phone" />
 
     <TextView
         android:id="@+id/mapsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="8dp"
+=======
+        android:layout_marginTop="6dp"
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
         android:layout_marginEnd="55dp"
         android:contentDescription="Maps icon"
         android:fontFamily="@font/disketmonoregular"
@@ -107,23 +176,35 @@
         android:text="MAPS"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
+<<<<<<< HEAD
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.335" />
+=======
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.288"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapsImageButton" />
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
 
     <TextView
         android:id="@+id/galleryTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
+<<<<<<< HEAD
         android:layout_marginTop="20dp"
+=======
+        android:layout_marginTop="12dp"
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
         android:fontFamily="@font/disketmonoregular"
         android:text="Gallery"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
+<<<<<<< HEAD
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.363"
@@ -135,6 +216,17 @@
         android:id="@+id/messageTextView"
         android:layout_width="79dp"
         android:layout_height="25dp"
+=======
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.746"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/galleryImageButton" />
+
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="109dp"
+        android:layout_height="29dp"
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
         android:layout_marginTop="6dp"
         android:layout_marginEnd="50dp"
         android:fontFamily="@font/disketmonoregular"
@@ -143,10 +235,17 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.622" />
+=======
+        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.715" />
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
 
     <TextView
         android:id="@+id/browserTextView"
@@ -160,39 +259,64 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         app:layout_constraintHorizontal_bias="0.435"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.618" />
+=======
+        app:layout_constraintHorizontal_bias="0.737"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
 
     <TextView
         android:id="@+id/extrasTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="125dp"
+<<<<<<< HEAD
+=======
+        android:layout_marginTop="96dp"
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
         android:layout_marginEnd="125dp"
         android:layout_marginBottom="46dp"
         android:fontFamily="@font/disketmonoregular"
         android:text="EXTRAS"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
+<<<<<<< HEAD
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.045" />
+=======
+        app:layout_constraintBottom_toTopOf="@+id/mapsImageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
 
     <TextView
         android:id="@+id/callTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
+=======
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="257dp"
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
         android:fontFamily="@font/disketmonoregular"
         android:text="Phone"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         app:layout_constraintHorizontal_bias="0.811"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -208,17 +332,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.535"
+=======
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.949" />
+
+    <ImageView
+        android:id="@+id/openCalendarButton"
+        android:layout_width="164dp"
+        android:layout_height="137dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.902"
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
         app:srcCompat="@android:drawable/ic_menu_my_calendar" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:text="CALENDAR"
+=======
+        android:text="Calendar"
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         app:layout_constraintHorizontal_bias="0.875"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -253,3 +398,11 @@
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.949" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+>>>>>>> 529f6ef5e7f9d72b6f2910239199302b05143ead
