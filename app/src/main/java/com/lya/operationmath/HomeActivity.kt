@@ -13,6 +13,7 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var startApp: Button
     private lateinit var extraStuff: Button
     private lateinit var profileButton: Button
+    private lateinit var highScoresButton: Button
     private lateinit var loginButton: Button
     private lateinit var auth: FirebaseAuth
 
@@ -26,6 +27,7 @@ class HomeActivity : AppCompatActivity() {
         extraStuff = findViewById(R.id.extrasButton)
         loginButton = findViewById(R.id.loginHomeButton)
         profileButton = findViewById(R.id.profileHomeButton)
+        highScoresButton = findViewById(R.id.highScoreButton)
 
         checkUserLoggedIn()
 
@@ -52,6 +54,10 @@ class HomeActivity : AppCompatActivity() {
             startActivity(profileIntent)
         }
 
+        highScoresButton.setOnClickListener{
+            val highScoresIntent = Intent(this@HomeActivity, HighScoresActivity::class.java)
+            startActivity(highScoresIntent)
+        }
     }
 
     private fun checkUserLoggedIn(){

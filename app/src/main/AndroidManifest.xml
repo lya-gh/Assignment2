@@ -35,6 +35,9 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
+            android:name=".HighScoresActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">

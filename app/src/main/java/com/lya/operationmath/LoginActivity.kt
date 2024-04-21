@@ -1,16 +1,19 @@
 package com.lya.operationmath
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
 
+    object GlobalStuff {
+        var user = ""
+    }
     private lateinit var registerButton: Button
     private lateinit var loginButton: Button
     private lateinit var email: EditText
@@ -48,7 +51,9 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this@LoginActivity, OnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(this@LoginActivity, "Login successful", Toast.LENGTH_SHORT).show()
+
                     val homePageIntent = Intent(this@LoginActivity, HomeActivity::class.java)
+                    GlobalStuff.user = email
                     startActivity(homePageIntent)
                 } else {
                     Toast.makeText(this@LoginActivity, "Login failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()

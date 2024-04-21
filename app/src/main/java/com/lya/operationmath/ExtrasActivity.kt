@@ -26,6 +26,9 @@ class ExtrasActivity : AppCompatActivity() {
         val messageButton = findViewById<ImageButton>(R.id.messageImageButton)
         val browserButton = findViewById<ImageButton>(R.id.browserImageButton)
         val phoneButton = findViewById<ImageButton>(R.id.phoneImageButton)
+        val openCalendarButton = findViewById<ImageView>(R.id.openCalendarButton)
+        val openFacebookButton = findViewById<ImageView>(R.id.openFacebookButton)
+
 
         //Open maps using OnClick Event
         /*mapsButton.setOnClickListener {
@@ -71,6 +74,31 @@ class ExtrasActivity : AppCompatActivity() {
             val dialIntent = Intent(Intent.ACTION_VIEW, Uri.parse("tel:"))
             startActivity(dialIntent)
         }
-    }
 
+        openCalendarButton.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW).apply {
+                data = Uri.parse("content://com.android.calendar/time")
+            }
+            if (intent.resolveActivity(packageManager) != null) {
+                startActivity(intent)
+            } else {
+                // Handle the case where Google Calendar is not installed
+                startActivity(
+                    Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("market://details?id=com.google.android.calendar")
+                    )
+                )
+            }
+            //Open facebook in browser using OnClick Event
+            openFacebookButton.setOnClickListener {
+                val url = "https://www.facebook.com"
+
+                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                startActivity(browserIntent)
+            }
+
+
+        }
+    }
 }

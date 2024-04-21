@@ -50,7 +50,10 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
     implementation("com.google.firebase:firebase-auth:22.3.1")
     implementation("com.google.firebase:firebase-firestore:24.11.0")
+    implementation("com.microsoft.sqlserver:mssql-jdbc:10.2.1.jre8")
+    implementation(files("C:\\Assignment1708\\Assignment1Lya\\SourceCode\\OperationMath\\app\\libs\\jtds-1.3.1.jar"))
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
 }

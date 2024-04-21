@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#264941"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        android:text="High Scores"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewHighScores"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textColor="@color/white"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="351dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="136dp"
+        android:backgroundTint="#FFFFFF"
+        android:backgroundTintMode="screen"
+        android:fontFamily="@font/disketmonoregular"
+        android:text="Delete Scores"
+        android:textColor="#264941" />
+</LinearLayout>

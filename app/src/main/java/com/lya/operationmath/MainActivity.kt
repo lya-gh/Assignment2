@@ -1,9 +1,10 @@
 package com.lya.operationmath
 
 
+import android.content.Context
 import android.content.Intent
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
+import android.database.sqlite.SQLiteDatabase
+import android.database.sqlite.SQLiteOpenHelper
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.Handler
@@ -12,7 +13,15 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import java.lang.NumberFormatException
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import java.sql.Connection
+import java.sql.DriverManager
+import java.sql.ResultSet
+import java.sql.Statement
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,8 +37,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var countDownTimer: CountDownTimer
     private var isTimerRunning = false
     private var score:Int = 0
+    private var noq:Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -43,28 +54,31 @@ class MainActivity : AppCompatActivity() {
         statusText = findViewById<TextView>(R.id.statusText)
         timerText = findViewById<TextView>(R.id.timerView)
 
-        restartButton.isEnabled=false
-        restartButton.visibility=View.INVISIBLE
+        restartButton.isEnabled = false
+        restartButton.visibility = View.INVISIBLE
 
         // Timer initialization
-        countDownTimer = object : CountDownTimer(11000,1000){
+        countDownTimer = object : CountDownTimer(11000, 1000) {
 
             // Function to display timer per second during countdown
             override fun onTick(millisUntilFinished: Long) {
-                timerText.text = (millisUntilFinished/1000).toString()
+                timerText.text = (millisUntilFinished / 1000).toString()
                 timerText.setVisibility(View.VISIBLE)
             }
 
             // Function when timer finishes
-            override fun onFinish(){
+            override fun onFinish() {
+                noq--
                 statusText.setText("Time's up! \n You got $score right!")
-                timerText.visibility=View.INVISIBLE
-                userAnswer.isEnabled=false
-                userAnswer.visibility=View.INVISIBLE
-                submitButton.isEnabled=false
-                submitButton.visibility=View.INVISIBLE
+                timerText.visibility = View.INVISIBLE
+                userAnswer.isEnabled = false
+                userAnswer.visibility = View.INVISIBLE
+                submitButton.isEnabled = false
+                submitButton.visibility = View.INVISIBLE
                 restartButton.isEnabled = true
-                restartButton.visibility=View.VISIBLE
+                restartButton.visibility = View.VISIBLE
+                if (noq == 1)
+                    insertScore()
             }
         }
 
@@ -72,12 +86,13 @@ class MainActivity : AppCompatActivity() {
         startGame()
 
         //Call function to check answer when submit button is pressed
-        submitButton.setOnClickListener(){
+        submitButton.setOnClickListener() {
             checkAnswer()
+            noq++
         }
 
         //Call function to restart game when try again button is pressed
-        restartButton.setOnClickListener(){
+        restartButton.setOnClickListener() {
             startGame()
             submitButton.visibility = View.VISIBLE
             restartButton.isEnabled = true
@@ -85,13 +100,47 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Go to home page when home button is long pressed
-        homeButton.setOnLongClickListener(){
+        homeButton.setOnLongClickListener() {
             val homeIntent = Intent(this@MainActivity, HomeActivity::class.java)
             startActivity(homeIntent)
             return@setOnLongClickListener true;
         }
-
     }
+
+    //Insert high scores to the DB
+    private fun insertScore() {
+        try {
+            lateinit var auth: FirebaseAuth
+            lateinit var firestore: FirebaseFirestore
+            auth = FirebaseAuth.getInstance()
+            firestore = FirebaseFirestore.getInstance()
+            //get display name based on email
+            firestore.collection("users")
+                .whereEqualTo("email", LoginActivity.GlobalStuff.user)
+                .get()
+                .addOnSuccessListener { querySnapshot ->
+                    if (!querySnapshot.isEmpty) {
+                        val document = querySnapshot.documents[0]
+                        val displayName = document.getString("displayName")
+                        // Load SQL Server JDBC driver and establish connection
+                        val connection = ConnectionHelper()
+                        connection.dbConn()
+
+                        // SQL INSERT statement
+                        val sqlQuery = "INSERT INTO Scores (UserName, Score) VALUES (?,?)"
+                        if (displayName != null) {
+                            connection.insertData(sqlQuery, displayName, score)
+                        }
+                    }else {}
+                }
+                .addOnFailureListener { e ->
+                }
+            //connection.close()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
 
     // Function to start game
     private fun startGame(){
@@ -100,7 +149,7 @@ class MainActivity : AppCompatActivity() {
         userAnswer.setText("")
         userAnswer.visibility=View.VISIBLE
         statusText.setText("")
-        userAnswer.hint=("Answer")
+        userAnswer.hint=("Type Here")
         if(!isTimerRunning){
             countDownTimer.start()
             isTimerRunning = true
@@ -183,5 +232,4 @@ class MainActivity : AppCompatActivity() {
             countDownTimer.start()
         }, 1000)
     }
-
 }
